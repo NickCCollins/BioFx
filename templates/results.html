@@ -1,0 +1,11 @@
+<hr>
+<h1>Results</h1>
+{%  if metric  %}
+    <div class="row">
+        <div class="verbose-metric col-md-2">{{ verbose_metrics[metric] }}:</div>
+        <div class="result-num col-md-1">{{ result }}</div>
+    </div>
+{%  endif %}
+<br>
+{% include '%s.html' % metric with context %}
+<hr>

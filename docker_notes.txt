@@ -1,0 +1,8 @@
+A few notes for building and running the docker image:
+
+1) cd to directory that contains the Dockerfile (this dir)
+2) Run `docker build -t challenge .` while in a terminal where docker is installed (for me, Docker Toolbox's quickstart
+    terminal worked as a light linux VM on Windows)
+3) Run `docker run -d -p 4000:80 challenge` (port 80 is exposed per the Dockerfile).
+4) Go to `localhost:4000` if your OS matches the OS of the aforementioned terminal. If not, check the IP that the VM is
+    running under, and replace 'localhost' with that when navigating to the website (typically 192.168.99.100)

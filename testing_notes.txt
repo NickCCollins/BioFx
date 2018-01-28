@@ -1,0 +1,17 @@
+A few notes for running integration tests:
+
+Steps
+1) Run the container for this project in detached mode:
+    `docker run -d -p 4000:80 challenge`
+2) Run the standalone-firefox container that Selenium has published in detached mode (specify port 4444):
+    `docker run -d -p 4444:4444 selenium/standalone-firefox-debug`
+3) Run `python tests.py`. Wait and see the results.
+
+If that doesn't work (Connection Errors):
+- check that docker is running on `localhost`. If it isn't, put the docker IP into the
+    DOCKER_HOST setting (line 13, tests.py), and rerun `python tests.py`.
+    - I was running Win OS with the Docker Toolbox Linux VM, the IP was '192.168.99.100' by default.
+
+
+
+

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1>Welcome to Nick's Coding Challenge!</h1>
+        <p>This is a simple string metric webpage. Enter values to String 1 and String 2, select your metric,
+        then click 'Submit' to see the results.</p>
+        <br>
+        <div class="help-text"><b>Note:</b> String inputs are case-sensitive.
+            Raw inputs (including spaces and symbols) will be used in analyses.</div>
+    </div>
+
+    {% include 'form.html' %}
+
+    {% if metric and results is not none %}
+        <div class="results">
+            {% include "results.html" with context %}
+        </div>
+    {% endif %}
+{% endblock %}

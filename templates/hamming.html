@@ -1,0 +1,16 @@
+<table class="table">
+    <div class="row">
+        <tr class="first-string">
+            {% for c in string_1 %}
+                <td {% if loop.index0 in extra_data.unmatched_indices %}class="unmatched"{% endif %}>{{ c }}</td>
+            {% endfor %}
+        </tr>
+    </div>
+    <div class="row">
+        <tr class="second-string">
+            {% for c in string_2 %}
+                <td {% if loop.index0 in extra_data.unmatched_indices %}class="unmatched"{% endif %}>{{ c }}</td>
+            {% endfor %}
+        </tr>
+    </div>
+</table>

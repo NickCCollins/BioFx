@@ -1,0 +1,29 @@
+<div class="col-md-4">
+    <div class="div-top">
+        <p>Set Intersection</p>
+    </div>
+    <div class="div-bottom">
+        <p>Set Union</p>
+    </div>
+</div>
+<div class="col-md-4">
+   <div class="div-top">
+        <p>{% if extra_data.set_intersection[0]|length > 0 %}
+            {{ extra_data.set_intersection[0] }}
+        {% else %}
+            No Intersection
+        {% endif %}
+        </p>
+    </div>
+    <div class="div-bottom">
+        <p>{{ extra_data.set_union[0] }}</p>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="div-top">
+        <p>{{ extra_data.set_intersection[1] }}</p>
+    </div>
+    <div class="div-bottom">
+        <p>{{ extra_data.set_union[1] }}</p>
+    </div>
+</div>

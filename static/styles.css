@@ -1,0 +1,21 @@
+.content { margin-top: 20px; }
+
+.help-text { font-style: italic;}
+
+div.errors { color: red; font-style: italic; }
+
+/* results */
+.verbose-metric { font-size: medium; }
+.result-num { background: #f1f1f1; border: 1px solid black; border-radius: 2px;}
+
+/* hamming */
+tr.first-string > td.unmatched { color: blue; }
+tr.second-string > td.unmatched { color: red; }
+
+/* jaccard */
+.div-top { border-bottom: 2px solid black; }
+.div-top, .div-bottom { text-align: center; }
+
+/* levenshtein */
+.left-header { border-right-width: 2px !important; }
+.lev-result { background-color: #e0fde0; }

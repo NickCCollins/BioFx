@@ -1,0 +1,30 @@
+<table class="table table-bordered table-striped">
+    <thead>
+        <div class="row">
+            <tr>
+                <th></th>
+                <th></th>
+                {% for c in string_1 %}
+                    <th>{{ c }}</th>
+                {%  endfor %}
+            </tr>
+        </div>
+    </thead>
+    <tbody>
+        {%  for batch in extra_data.batches %}
+            {%  set batch_loop = loop %}
+            <div class="row">
+                <tr>
+                    {%  if loop.first %}
+                        <td class="left-header"></td>
+                    {% else %}
+                    <th class="left-header">{{ string_2[loop.index0 - 1] }}</th>
+                    {% endif %}
+                    {% for num in batch %}
+                        <td {% if loop.last and batch_loop.last %}class="lev-result"{% endif %}>{{ num }}</td>
+                    {% endfor %}
+                </tr>
+            </div>
+        {% endfor %}
+    </tbody>
+</table>

@@ -1,0 +1,50 @@
+{% if errors %}
+    {% for err in errors %}<div class="errors general-err">{{ err }}</div>{% endfor %}
+{% endif %}
+<form action="" method="post">
+    <div class="row">
+        {# String 1 #}
+        <div class="col-md-6">
+            {% if form.errors['string_1'] %}
+                <div class="errors string_1-err">
+                    {% for error in form.errors['string_1'] %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <label for="string_1">{{ form.string_1.label }}</label>
+            {{ form.string_1(class_="form-control") }}
+        </div>
+        {# String 2 #}
+        <div class="col-md-6">
+            {% if form.errors['string_2'] %}
+                <div class="errors string_2-err">
+                    {% for error in form.errors['string_2'] %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <label for="string_2">{{ form.string_2.label }}</label>
+            {{ form.string_2(class_="form-control") }}
+        </div>
+    </div>
+    <br>
+    {# Metric #}
+    <div class="row">
+        <div class="col-md-6">
+            {% if form.errors['metric'] %}
+                <div class="errors metric-err">
+                    {% for error in form.errors['metric'] %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {{ form.metric.label }}: {{ form.metric(class_="form-control") }}
+        </div>
+    </div>
+    <br>
+    {# Submit Button #}
+    <div>
+        <button id="submit_btn" class="btn btn-primary" type="submit" value="Submit">Submit</button>
+    </div>
+</form>
